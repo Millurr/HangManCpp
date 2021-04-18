@@ -16,26 +16,34 @@ class GameManager {
 
                         "\n  +---+\n  |   |\n  O   |\n /|   |\n      |\n      |\n=========\n",
 
-                        "\n  +---+\n  |   |\n  O   |\n /|\  |\n      |\n      |\n=========\n",
+                        "\n  +---+\n  |   |\n  O   |\n /|\\  |\n      |\n      |\n=========\n",
 
-                        "\n  +---+\n  |   |\n  O   |\n /|\  |\n /    |\n      |\n=========\n",
+                        "\n  +---+\n  |   |\n  O   |\n /|\\  |\n /    |\n      |\n=========\n",
 
-                        "\n  +---+\n  |   |\n  O   |\n /|\  |\n / \  |\n      |\n=========\n" };
-
-    string copyWord;
-
-    string rightWord;
+                        "\n  +---+\n  |   |\n  O   |\n /|\\  |\n / \\  |\n      |\n=========\n" };
 
     string wrongLetters;
 
     string rightLetters;
 
+    void setWord(string inp);
+
+    void setRightWord(string inp);
+
+    void updateGuesses(bool isRight, char inp, int index);
+
+    void printBoard();
+
 public:
     void start();
 
-    char validate(string input);
+    void validate(string input);
 
     bool finish();
+
+    string getWord();
+
+    string getRightWord();
 
     void run();
 };
